@@ -106,6 +106,11 @@ public class NewCalcul extends javax.swing.JFrame {
                 jButton5MouseClicked(evt);
             }
         });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("cos");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -551,10 +556,49 @@ jTextArea1.append("0");         // TODO add your handling code here:
                   jTextArea1.setText( String.valueOf( result ) );// TODO add your handling code here:
     }//GEN-LAST:event_jButton24ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+//jTextArea1. 
+double degrees,radians;
+
+
+        switch ( degrees) {
+      case 1:  degrees = 0.0;
+        radians = Math.toRadians(degrees);
+            break;
+            
+      case 2: degrees = 30.0;;
+      radians = Math.toRadians(degrees);
+      break;
+      
+    case 3: degrees = 45.0;
+     radians = Math.toRadians(degrees);
+      break;
+      
+    case 4: degrees = 60.0;
+      radians = Math.toRadians(degrees);
+      break;
+      
+     case 5: degrees = 90.0;
+     radians = Math.toRadians(degrees);
+      break;
+      
+     case 6:degrees = 180.0;
+    radians = Math.toRadians(degrees);
+      break;
+      
+    case 7: degrees = 270.0;
+    radians = Math.toRadians(degrees);
+      break;
+      
+    case 8:degrees = 360.0;
+      radians = Math.toRadians(degrees);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+//!!!!!!!!!    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
