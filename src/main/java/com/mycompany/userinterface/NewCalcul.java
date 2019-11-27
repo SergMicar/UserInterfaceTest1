@@ -560,38 +560,47 @@ jTextArea1.append("0");         // TODO add your handling code here:
 //jTextArea1. 
 double degrees,radians;
 
-
-        switch ( degrees) {
+        switch (degrees) {
       case 1:  degrees = 0.0;
         radians = Math.toRadians(degrees);
+           System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
             break;
             
       case 2: degrees = 30.0;;
       radians = Math.toRadians(degrees);
+      System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
       break;
       
     case 3: degrees = 45.0;
      radians = Math.toRadians(degrees);
+     System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
       break;
       
     case 4: degrees = 60.0;
       radians = Math.toRadians(degrees);
+      System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
       break;
       
      case 5: degrees = 90.0;
      radians = Math.toRadians(degrees);
+     System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
       break;
       
      case 6:degrees = 180.0;
     radians = Math.toRadians(degrees);
+    System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
       break;
       
     case 7: degrees = 270.0;
     radians = Math.toRadians(degrees);
+    System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
       break;
       
     case 8:degrees = 360.0;
       radians = Math.toRadians(degrees);
+      System.out.format("Синус %.1f градусов равен %.4f%n", degrees, Math.sin(radians));
+      default:
+          System.out.println("Нeт таких значений,попробуйте еще раз");
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
