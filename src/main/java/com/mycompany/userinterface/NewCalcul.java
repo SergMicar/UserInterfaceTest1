@@ -118,6 +118,11 @@ public class NewCalcul extends javax.swing.JFrame {
                 jButton6MouseClicked(evt);
             }
         });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("tan");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -604,6 +609,51 @@ double degrees,radians;
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+     double degrees,radians;
+        switch (degrees) {
+      case 1:  degrees = 0.0;
+        radians = Math.toRadians(degrees);
+           System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+            break;
+            
+      case 2: degrees = 30.0;;
+      radians = Math.toRadians(degrees);
+      System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+      break;
+      
+    case 3: degrees = 45.0;
+     radians = Math.toRadians(degrees);
+     System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+      break;
+      
+    case 4: degrees = 60.0;
+      radians = Math.toRadians(degrees);
+      System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+      break;
+      
+     case 5: degrees = 90.0;
+     radians = Math.toRadians(degrees);
+     System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+      break;
+      
+     case 6:degrees = 180.0;
+    radians = Math.toRadians(degrees);
+    System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+      break;
+      
+    case 7: degrees = 270.0;
+    radians = Math.toRadians(degrees);
+    System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+      break;
+      
+    case 8:degrees = 360.0;
+      radians = Math.toRadians(degrees);
+      System.out.format("Косинус %.1f градусов равен %.4f%n", degrees, Math.cos(radians));
+      default:
+          System.out.println("Нeт таких значений,попробуйте еще раз");   // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -632,13 +682,13 @@ double degrees,radians;
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+   /*     java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NewCalcul().setVisible(true);
             }
         });
     }
-
+*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
