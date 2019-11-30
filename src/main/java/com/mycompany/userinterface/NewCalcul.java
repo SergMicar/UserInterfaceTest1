@@ -575,38 +575,34 @@ jTextArea1.append("0");         // TODO add your handling code here:
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        double num; 
-        num=Double.parseDouble(jTextArea1.getText());
+     double num=Double.parseDouble(jTextArea1.getText());
        Math.sin(num);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-  double num; 
-        num=Double.parseDouble(jTextArea1.getText());
+        double num=Double.parseDouble(jTextArea1.getText());
        Math.cos(num);     
      
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-  double num; 
-        num=Double.parseDouble(jTextArea1.getText());
+   
+       double num=Double.parseDouble(jTextArea1.getText());
        Math.tan(num);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-   int n;
-   n=Integer.parseInt(jTextArea1.getText());
+            int n=Integer.parseInt(jTextArea1.getText());
         int result = 1;
         for (int i = 1; i <=n; i ++){
 	        result = result*i;
         }
-	//return result;        // TODO add your handling code here:
+	System.out.println (result);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-      double num; 
-        num=Double.parseDouble(jTextArea1.getText());
+    double num=Double.parseDouble(jTextArea1.getText());
        Math.log(num);   // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
     
