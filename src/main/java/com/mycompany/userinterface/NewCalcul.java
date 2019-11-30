@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.mycompany.userinterface;
-
+import java.util.regex.*;
 /**
  *
  * @author anna
@@ -554,7 +554,28 @@ jTextArea1.getText().substring(0,jTextArea1.getText().length()-2);        // TOD
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-//jTextArea1.        // TODO add your handling code here:
+ 
+int n;
+int a=Integer.parseInt(jTextArea1.getText());
+int b=Integer.parseInt(jTextArea1.getText());
+switch (jTextArea1. getText()) {
+        case "+":
+           n=a+b;
+            break;
+       case "-":
+           n=a-b;
+            break;
+       case "/": 
+           n=a/b;
+            break;
+         case "*": 
+             n=a*b;
+            break;
+        default:
+            break;
+    }
+
+
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
