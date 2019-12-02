@@ -10,7 +10,8 @@ import java.util.regex.*;
  * @author anna
  */
 public class NewCalcul extends javax.swing.JFrame {
-
+ int a,b;
+ String opera;
     /**
      * Creates new form NewCalcul
      */
@@ -351,7 +352,7 @@ public class NewCalcul extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(218, 218, 218)
-                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -381,10 +382,6 @@ public class NewCalcul extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(11, 11, 11))
-                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -402,6 +399,8 @@ public class NewCalcul extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -438,19 +437,22 @@ public class NewCalcul extends javax.swing.JFrame {
                     .addComponent(jButton15)
                     .addComponent(jButton22)
                     .addComponent(jButton23))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton16)
-                    .addComponent(jButton17)
-                    .addComponent(jButton19)
-                    .addComponent(jButton24))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton20)
-                        .addComponent(jButton21))
-                    .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 35, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton16)
+                            .addComponent(jButton17)
+                            .addComponent(jButton19)
+                            .addComponent(jButton24))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton20)
+                            .addComponent(jButton21)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 56, Short.MAX_VALUE))
         );
 
         pack();
@@ -501,7 +503,8 @@ public class NewCalcul extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-jTextArea1.getText().substring(0,jTextArea1.getText().length()-2);        // TODO add your handling code here:
+String w =jTextArea1.getText().substring(0,jTextArea1.getText().length()-1);
+jTextArea1.setText(w);// TODO add your handling code here:
            // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -554,10 +557,26 @@ jTextArea1.getText().substring(0,jTextArea1.getText().length()-2);        // TOD
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
- 
-int n;
-int a=Integer.parseInt(jTextArea1.getText());
-int b=Integer.parseInt(jTextArea1.getText());
+String []q = jTextArea1.getText().split("\\+|-|\\*|/");
+a = Integer.parseInt(q[0]);
+b = Integer.parseInt(q[1]);
+if(jTextArea1.getText().contains("+")){
+  jTextArea1.setText(String.valueOf(a+b)); 
+      }else if(jTextArea1.getText().contains("-") ){
+               jTextArea1.setText(String.valueOf(a-b));
+            }else if(jTextArea1.getText().contains("*")){
+                   jTextArea1.setText(String.valueOf(a*b));
+                     }else if(jTextArea1.getText().contains("/") ){
+                      jTextArea1.setText(String.valueOf(a/b)); 
+                  }else{
+                     System.out.print("Повторите попытку");
+                  }
+   
+
+
+
+/*int a=Integer.parseInt(q[0]);
+int b=Integer.parseInt(q[1]);
 switch (jTextArea1. getText()) {
         case "+":
            n=a+b;
@@ -574,7 +593,7 @@ switch (jTextArea1. getText()) {
         default:
             break;
     }
-
+*/
 
     }//GEN-LAST:event_jButton25ActionPerformed
 
@@ -627,20 +646,21 @@ jTextArea1.append("0");         // TODO add your handling code here:
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
      double num=Double.parseDouble(jTextArea1.getText());
-       Math.sin(num);
+      // Math.sin(num);
+       jTextArea1.setText(String.valueOf(Math.sin(num)));
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         double num=Double.parseDouble(jTextArea1.getText());
-       Math.cos(num);     
+       jTextArea1.setText(String.valueOf(Math.cos(num)));
      
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
    
        double num=Double.parseDouble(jTextArea1.getText());
-       Math.tan(num);        // TODO add your handling code here:
+       jTextArea1.setText(String.valueOf(Math.tan(num)));       // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -649,12 +669,12 @@ jTextArea1.append("0");         // TODO add your handling code here:
         for (int i = 1; i <=n; i ++){
 	        result = result*i;
         }
-	System.out.println (result);        // TODO add your handling code here:
+	 jTextArea1.setText(String.valueOf(result));       // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
     double num=Double.parseDouble(jTextArea1.getText());
-       Math.log(num);   // TODO add your handling code here:
+        jTextArea1.setText(String.valueOf(Math.log(num)));// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseClicked
@@ -670,7 +690,10 @@ jTextArea1.append("*");        // TODO add your handling code here:
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-jTextArea1.append("+");        // TODO add your handling code here:
+        
+        jTextArea1.append("+");
+        opera = "+";
+        
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
